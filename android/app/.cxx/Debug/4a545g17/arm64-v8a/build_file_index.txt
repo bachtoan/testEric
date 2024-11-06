@@ -1,0 +1,11 @@
+C:\Users\Admin\AwesomeProject\node_modules\@candlefinance\faster-image\android\build\generated\source\codegen\jni\CMakeLists.txt
+C:\Users\Admin\AwesomeProject\node_modules\@shopify\flash-list\android\build\generated\source\codegen\jni\CMakeLists.txt
+C:\Users\Admin\AwesomeProject\node_modules\react-native-mmkv\android\build\generated\source\codegen\jni\CMakeLists.txt
+C:\Users\Admin\AwesomeProject\node_modules\react-native-mmkv\android\CMakeLists.txt
+C:\Users\Admin\AwesomeProject\node_modules\react-native-mmkv\MMKV\Core\CMakeLists.txt
+C:\Users\Admin\AwesomeProject\node_modules\react-native-pager-view\android\build\generated\source\codegen\jni\CMakeLists.txt
+C:\Users\Admin\AwesomeProject\node_modules\react-native-reanimated\android\build\generated\source\codegen\jni\CMakeLists.txt
+C:\Users\Admin\AwesomeProject\node_modules\react-native-safe-area-context\android\src\main\jni\CMakeLists.txt
+C:\Users\Admin\AwesomeProject\node_modules\react-native-screens\android\src\main\jni\CMakeLists.txt
+C:\Users\Admin\AwesomeProject\node_modules\react-native-svg\android\src\main\jni\CMakeLists.txt
+C:\Users\Admin\AwesomeProject\node_modules\react-native\ReactAndroid\cmake-utils\default-app-setup\CMakeLists.txt

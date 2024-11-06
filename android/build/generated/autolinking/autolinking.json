@@ -1,51 +1,156 @@
 {
-  "root": "/Users/monkey/Documents/Project/AwesomeProject",
-  "reactNativePath": "/Users/monkey/Documents/Project/AwesomeProject/node_modules/react-native",
+  "root": "C:\\Users\\Admin\\AwesomeProject",
+  "reactNativePath": "C:\\Users\\Admin\\AwesomeProject\\node_modules\\react-native",
   "reactNativeVersion": "0.76",
   "dependencies": {
+    "@candlefinance/faster-image": {
+      "root": "C:\\Users\\Admin\\AwesomeProject\\node_modules\\@candlefinance\\faster-image",
+      "name": "@candlefinance/faster-image",
+      "platforms": {
+        "ios": {
+          "podspecPath": "C:\\Users\\Admin\\AwesomeProject\\node_modules\\@candlefinance\\faster-image\\FasterImage.podspec",
+          "version": "1.6.2",
+          "configurations": [],
+          "scriptPhases": []
+        },
+        "android": {
+          "sourceDir": "C:\\Users\\Admin\\AwesomeProject\\node_modules\\@candlefinance\\faster-image\\android",
+          "packageImportPath": "import com.candlefinance.fasterimage.FasterImagePackage;",
+          "packageInstance": "new FasterImagePackage()",
+          "buildTypes": [],
+          "libraryName": "FasterImageView",
+          "componentDescriptors": [],
+          "cmakeListsPath": "C:/Users/Admin/AwesomeProject/node_modules/@candlefinance/faster-image/android/build/generated/source/codegen/jni/CMakeLists.txt",
+          "cxxModuleCMakeListsModuleName": null,
+          "cxxModuleCMakeListsPath": null,
+          "cxxModuleHeaderName": null,
+          "isPureCxxDependency": false
+        }
+      }
+    },
+    "@react-native-community/viewpager": {
+      "root": "C:\\Users\\Admin\\AwesomeProject\\node_modules\\@react-native-community\\viewpager",
+      "name": "@react-native-community/viewpager",
+      "platforms": {
+        "ios": {
+          "podspecPath": "C:\\Users\\Admin\\AwesomeProject\\node_modules\\@react-native-community\\viewpager\\react-native-viewpager.podspec",
+          "version": "5.0.11",
+          "configurations": [],
+          "scriptPhases": []
+        },
+        "android": {
+          "sourceDir": "C:\\Users\\Admin\\AwesomeProject\\node_modules\\@react-native-community\\viewpager\\android",
+          "packageImportPath": "import com.reactnativecommunity.viewpager.RNCViewPagerPackage;",
+          "packageInstance": "new RNCViewPagerPackage()",
+          "buildTypes": [],
+          "componentDescriptors": [],
+          "cmakeListsPath": "C:/Users/Admin/AwesomeProject/node_modules/@react-native-community/viewpager/android/build/generated/source/codegen/jni/CMakeLists.txt",
+          "cxxModuleCMakeListsModuleName": null,
+          "cxxModuleCMakeListsPath": null,
+          "cxxModuleHeaderName": null,
+          "isPureCxxDependency": false
+        }
+      }
+    },
+    "@shopify/flash-list": {
+      "root": "C:\\Users\\Admin\\AwesomeProject\\node_modules\\@shopify\\flash-list",
+      "name": "@shopify/flash-list",
+      "platforms": {
+        "ios": {
+          "podspecPath": "C:\\Users\\Admin\\AwesomeProject\\node_modules\\@shopify\\flash-list\\RNFlashList.podspec",
+          "version": "1.7.1",
+          "configurations": [],
+          "scriptPhases": []
+        },
+        "android": {
+          "sourceDir": "C:\\Users\\Admin\\AwesomeProject\\node_modules\\@shopify\\flash-list\\android",
+          "packageImportPath": "import com.shopify.reactnative.flash_list.ReactNativeFlashListPackage;",
+          "packageInstance": "new ReactNativeFlashListPackage()",
+          "buildTypes": [],
+          "libraryName": "rnflashlist",
+          "componentDescriptors": [
+            "AutoLayoutViewComponentDescriptor",
+            "CellContainerComponentDescriptor"
+          ],
+          "cmakeListsPath": "C:/Users/Admin/AwesomeProject/node_modules/@shopify/flash-list/android/build/generated/source/codegen/jni/CMakeLists.txt",
+          "cxxModuleCMakeListsModuleName": null,
+          "cxxModuleCMakeListsPath": null,
+          "cxxModuleHeaderName": null,
+          "isPureCxxDependency": false
+        }
+      }
+    },
     "react-native-mmkv": {
-      "root": "/Users/monkey/Documents/Project/AwesomeProject/node_modules/react-native-mmkv",
+      "root": "C:\\Users\\Admin\\AwesomeProject\\node_modules\\react-native-mmkv",
       "name": "react-native-mmkv",
       "platforms": {
         "ios": {
-          "podspecPath": "/Users/monkey/Documents/Project/AwesomeProject/node_modules/react-native-mmkv/react-native-mmkv.podspec",
+          "podspecPath": "C:\\Users\\Admin\\AwesomeProject\\node_modules\\react-native-mmkv\\react-native-mmkv.podspec",
           "version": "3.1.0",
           "configurations": [],
           "scriptPhases": []
         },
         "android": {
-          "sourceDir": "/Users/monkey/Documents/Project/AwesomeProject/node_modules/react-native-mmkv/android",
+          "sourceDir": "C:\\Users\\Admin\\AwesomeProject\\node_modules\\react-native-mmkv\\android",
           "packageImportPath": "import com.mrousavy.mmkv.MmkvPackage;",
           "packageInstance": "new MmkvPackage()",
           "buildTypes": [],
           "libraryName": "RNMmkvSpec",
           "componentDescriptors": [],
-          "cmakeListsPath": "/Users/monkey/Documents/Project/AwesomeProject/node_modules/react-native-mmkv/android/build/generated/source/codegen/jni/CMakeLists.txt",
+          "cmakeListsPath": "C:/Users/Admin/AwesomeProject/node_modules/react-native-mmkv/android/build/generated/source/codegen/jni/CMakeLists.txt",
           "cxxModuleCMakeListsModuleName": "react-native-mmkv",
-          "cxxModuleCMakeListsPath": "/Users/monkey/Documents/Project/AwesomeProject/node_modules/react-native-mmkv/android/CMakeLists.txt",
+          "cxxModuleCMakeListsPath": "C:/Users/Admin/AwesomeProject/node_modules/react-native-mmkv/android/CMakeLists.txt",
           "cxxModuleHeaderName": "NativeMmkvModule",
           "isPureCxxDependency": false
         }
       }
     },
+    "react-native-pager-view": {
+      "root": "C:\\Users\\Admin\\AwesomeProject\\node_modules\\react-native-pager-view",
+      "name": "react-native-pager-view",
+      "platforms": {
+        "ios": {
+          "podspecPath": "C:\\Users\\Admin\\AwesomeProject\\node_modules\\react-native-pager-view\\react-native-pager-view.podspec",
+          "version": "6.5.0",
+          "configurations": [],
+          "scriptPhases": []
+        },
+        "android": {
+          "sourceDir": "C:\\Users\\Admin\\AwesomeProject\\node_modules\\react-native-pager-view\\android",
+          "packageImportPath": "import com.reactnativepagerview.PagerViewPackage;",
+          "packageInstance": "new PagerViewPackage()",
+          "buildTypes": [],
+          "libraryName": "pagerview",
+          "componentDescriptors": [
+            "LEGACY_RNCViewPagerComponentDescriptor",
+            "RNCViewPagerComponentDescriptor"
+          ],
+          "cmakeListsPath": "C:/Users/Admin/AwesomeProject/node_modules/react-native-pager-view/android/build/generated/source/codegen/jni/CMakeLists.txt",
+          "cxxModuleCMakeListsModuleName": null,
+          "cxxModuleCMakeListsPath": null,
+          "cxxModuleHeaderName": null,
+          "isPureCxxDependency": false
+        }
+      }
+    },
     "react-native-reanimated": {
-      "root": "/Users/monkey/Documents/Project/AwesomeProject/node_modules/react-native-reanimated",
+      "root": "C:\\Users\\Admin\\AwesomeProject\\node_modules\\react-native-reanimated",
       "name": "react-native-reanimated",
       "platforms": {
         "ios": {
-          "podspecPath": "/Users/monkey/Documents/Project/AwesomeProject/node_modules/react-native-reanimated/RNReanimated.podspec",
+          "podspecPath": "C:\\Users\\Admin\\AwesomeProject\\node_modules\\react-native-reanimated\\RNReanimated.podspec",
           "version": "3.16.1",
           "configurations": [],
           "scriptPhases": []
         },
         "android": {
-          "sourceDir": "/Users/monkey/Documents/Project/AwesomeProject/node_modules/react-native-reanimated/android",
+          "sourceDir": "C:\\Users\\Admin\\AwesomeProject\\node_modules\\react-native-reanimated\\android",
           "packageImportPath": "import com.swmansion.reanimated.ReanimatedPackage;",
           "packageInstance": "new ReanimatedPackage()",
           "buildTypes": [],
           "libraryName": "rnreanimated",
           "componentDescriptors": [],
-          "cmakeListsPath": "/Users/monkey/Documents/Project/AwesomeProject/node_modules/react-native-reanimated/android/build/generated/source/codegen/jni/CMakeLists.txt",
+          "cmakeListsPath": "C:/Users/Admin/AwesomeProject/node_modules/react-native-reanimated/android/build/generated/source/codegen/jni/CMakeLists.txt",
           "cxxModuleCMakeListsModuleName": null,
           "cxxModuleCMakeListsPath": null,
           "cxxModuleHeaderName": null,
@@ -54,17 +159,17 @@
       }
     },
     "react-native-safe-area-context": {
-      "root": "/Users/monkey/Documents/Project/AwesomeProject/node_modules/react-native-safe-area-context",
+      "root": "C:\\Users\\Admin\\AwesomeProject\\node_modules\\react-native-safe-area-context",
       "name": "react-native-safe-area-context",
       "platforms": {
         "ios": {
-          "podspecPath": "/Users/monkey/Documents/Project/AwesomeProject/node_modules/react-native-safe-area-context/react-native-safe-area-context.podspec",
+          "podspecPath": "C:\\Users\\Admin\\AwesomeProject\\node_modules\\react-native-safe-area-context\\react-native-safe-area-context.podspec",
           "version": "4.14.0",
           "configurations": [],
           "scriptPhases": []
         },
         "android": {
-          "sourceDir": "/Users/monkey/Documents/Project/AwesomeProject/node_modules/react-native-safe-area-context/android",
+          "sourceDir": "C:\\Users\\Admin\\AwesomeProject\\node_modules\\react-native-safe-area-context\\android",
           "packageImportPath": "import com.th3rdwave.safeareacontext.SafeAreaContextPackage;",
           "packageInstance": "new SafeAreaContextPackage()",
           "buildTypes": [],
@@ -73,7 +178,7 @@
             "RNCSafeAreaProviderComponentDescriptor",
             "RNCSafeAreaViewComponentDescriptor"
           ],
-          "cmakeListsPath": "/Users/monkey/Documents/Project/AwesomeProject/node_modules/react-native-safe-area-context/android/src/main/jni/CMakeLists.txt",
+          "cmakeListsPath": "C:/Users/Admin/AwesomeProject/node_modules/react-native-safe-area-context/android/src/main/jni/CMakeLists.txt",
           "cxxModuleCMakeListsModuleName": null,
           "cxxModuleCMakeListsPath": null,
           "cxxModuleHeaderName": null,
@@ -82,17 +187,17 @@
       }
     },
     "react-native-screens": {
-      "root": "/Users/monkey/Documents/Project/AwesomeProject/node_modules/react-native-screens",
+      "root": "C:\\Users\\Admin\\AwesomeProject\\node_modules\\react-native-screens",
       "name": "react-native-screens",
       "platforms": {
         "ios": {
-          "podspecPath": "/Users/monkey/Documents/Project/AwesomeProject/node_modules/react-native-screens/RNScreens.podspec",
+          "podspecPath": "C:\\Users\\Admin\\AwesomeProject\\node_modules\\react-native-screens\\RNScreens.podspec",
           "version": "3.35.0",
           "configurations": [],
           "scriptPhases": []
         },
         "android": {
-          "sourceDir": "/Users/monkey/Documents/Project/AwesomeProject/node_modules/react-native-screens/android",
+          "sourceDir": "C:\\Users\\Admin\\AwesomeProject\\node_modules\\react-native-screens\\android",
           "packageImportPath": "import com.swmansion.rnscreens.RNScreensPackage;",
           "packageInstance": "new RNScreensPackage()",
           "buildTypes": [],
@@ -108,7 +213,85 @@
             "RNSScreenComponentDescriptor",
             "RNSModalScreenComponentDescriptor"
           ],
-          "cmakeListsPath": "/Users/monkey/Documents/Project/AwesomeProject/node_modules/react-native-screens/android/src/main/jni/CMakeLists.txt",
+          "cmakeListsPath": "C:/Users/Admin/AwesomeProject/node_modules/react-native-screens/android/src/main/jni/CMakeLists.txt",
+          "cxxModuleCMakeListsModuleName": null,
+          "cxxModuleCMakeListsPath": null,
+          "cxxModuleHeaderName": null,
+          "isPureCxxDependency": false
+        }
+      }
+    },
+    "react-native-svg": {
+      "root": "C:\\Users\\Admin\\AwesomeProject\\node_modules\\react-native-svg",
+      "name": "react-native-svg",
+      "platforms": {
+        "ios": {
+          "podspecPath": "C:\\Users\\Admin\\AwesomeProject\\node_modules\\react-native-svg\\RNSVG.podspec",
+          "version": "15.8.0",
+          "configurations": [],
+          "scriptPhases": []
+        },
+        "android": {
+          "sourceDir": "C:\\Users\\Admin\\AwesomeProject\\node_modules\\react-native-svg\\android",
+          "packageImportPath": "import com.horcrux.svg.SvgPackage;",
+          "packageInstance": "new SvgPackage()",
+          "buildTypes": [],
+          "libraryName": "rnsvg",
+          "componentDescriptors": [
+            "RNSVGCircleComponentDescriptor",
+            "RNSVGClipPathComponentDescriptor",
+            "RNSVGDefsComponentDescriptor",
+            "RNSVGFeBlendComponentDescriptor",
+            "RNSVGFeColorMatrixComponentDescriptor",
+            "RNSVGFeFloodComponentDescriptor",
+            "RNSVGFeGaussianBlurComponentDescriptor",
+            "RNSVGFeMergeComponentDescriptor",
+            "RNSVGFeOffsetComponentDescriptor",
+            "RNSVGFilterComponentDescriptor",
+            "RNSVGEllipseComponentDescriptor",
+            "RNSVGForeignObjectComponentDescriptor",
+            "RNSVGGroupComponentDescriptor",
+            "RNSVGImageComponentDescriptor",
+            "RNSVGLinearGradientComponentDescriptor",
+            "RNSVGLineComponentDescriptor",
+            "RNSVGMarkerComponentDescriptor",
+            "RNSVGMaskComponentDescriptor",
+            "RNSVGPathComponentDescriptor",
+            "RNSVGPatternComponentDescriptor",
+            "RNSVGRadialGradientComponentDescriptor",
+            "RNSVGRectComponentDescriptor",
+            "RNSVGSvgViewAndroidComponentDescriptor",
+            "RNSVGSymbolComponentDescriptor",
+            "RNSVGTextComponentDescriptor",
+            "RNSVGTextPathComponentDescriptor",
+            "RNSVGTSpanComponentDescriptor",
+            "RNSVGUseComponentDescriptor"
+          ],
+          "cmakeListsPath": "C:/Users/Admin/AwesomeProject/node_modules/react-native-svg/android/src/main/jni/CMakeLists.txt",
+          "cxxModuleCMakeListsModuleName": null,
+          "cxxModuleCMakeListsPath": null,
+          "cxxModuleHeaderName": null,
+          "isPureCxxDependency": false
+        }
+      }
+    },
+    "react-native-unistyles": {
+      "root": "C:\\Users\\Admin\\AwesomeProject\\node_modules\\react-native-unistyles",
+      "name": "react-native-unistyles",
+      "platforms": {
+        "ios": {
+          "podspecPath": "C:\\Users\\Admin\\AwesomeProject\\node_modules\\react-native-unistyles\\react-native-unistyles.podspec",
+          "version": "2.11.0",
+          "configurations": [],
+          "scriptPhases": []
+        },
+        "android": {
+          "sourceDir": "C:\\Users\\Admin\\AwesomeProject\\node_modules\\react-native-unistyles\\android",
+          "packageImportPath": "import com.unistyles.UnistylesPackage;",
+          "packageInstance": "new UnistylesPackage()",
+          "buildTypes": [],
+          "componentDescriptors": [],
+          "cmakeListsPath": "C:/Users/Admin/AwesomeProject/node_modules/react-native-unistyles/android/build/generated/source/codegen/jni/CMakeLists.txt",
           "cxxModuleCMakeListsModuleName": null,
           "cxxModuleCMakeListsPath": null,
           "cxxModuleHeaderName": null,
@@ -274,7 +457,7 @@
         {
           "name": "--path <path>",
           "description": "Path to the React Native project root.",
-          "default": "/Users/monkey/Documents/Project/AwesomeProject"
+          "default": "C:\\Users\\Admin\\AwesomeProject"
         },
         {
           "name": "--platform <string>",
@@ -326,7 +509,7 @@
         {
           "name": "--terminal <string>",
           "description": "Launches the Metro Bundler in a new window using the specified terminal path.",
-          "default": "vscode"
+          "default": "cmd.exe"
         },
         {
           "name": "--binary-path <string>",
@@ -486,7 +669,7 @@
         {
           "name": "--terminal <string>",
           "description": "Launches the Metro Bundler in a new window using the specified terminal path.",
-          "default": "vscode"
+          "default": "cmd.exe"
         },
         {
           "name": "--appId <string>",
@@ -561,7 +744,7 @@
   "assets": [],
   "project": {
     "ios": {
-      "sourceDir": "/Users/monkey/Documents/Project/AwesomeProject/ios",
+      "sourceDir": "C:\\Users\\Admin\\AwesomeProject\\ios",
       "xcodeProject": {
         "name": "AwesomeProject.xcworkspace",
         "path": ".",
@@ -570,7 +753,7 @@
       "assets": []
     },
     "android": {
-      "sourceDir": "/Users/monkey/Documents/Project/AwesomeProject/android",
+      "sourceDir": "C:\\Users\\Admin\\AwesomeProject\\android",
       "appName": "app",
       "packageName": "com.awesomeproject",
       "applicationId": "com.awesomeproject",

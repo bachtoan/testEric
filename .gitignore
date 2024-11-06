@@ -1,0 +1,51 @@
+# Logs
+*.log
+*.log.*
+
+# Node modules
+node_modules/
+
+# Metro, Jest, and React Native cache
+/cache
+/npm-debug.log*
+/yarn-debug.log*
+/yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Android build and cache directories
+/android/.gradle
+/android/app/build/
+/android/local.properties
+/android/.idea/
+/android/captures/
+/android/*.iml
+
+# Xcode and iOS build directories
+/ios/build/
+/ios/Pods/
+/ios/DerivedData/
+/ios/.DS_Store
+/ios/*.xcworkspace
+/ios/xcuserdata/
+
+# React Native specific cache
+__tests__/
+/flow-typed/
+/lib-cov/
+/*.tlog
+
+# Build files and cache files for Gradle
+.gradle/
+/build/
+
+# Google Service files for Firebase (add manually in production if needed)
+/android/app/google-services.json
+/ios/Runner/GoogleService-Info.plist
+
+# Other configuration files
+*.env
+.env.*.local
+.env.local
