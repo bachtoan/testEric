@@ -1,15 +1,18 @@
-import React, {useEffect, useRef} from 'react';
-import {FlatList, View, Text, Dimensions} from 'react-native';
-import {useStyles} from 'react-native-unistyles';
-
-import {stylesheet} from './styles';
-import Feed from '../feed';
-import {useNavigation} from '@react-navigation/native';
-import {Screens} from '@/const/Navigation.enum';
+import React, {useCallback, useEffect, useRef} from 'react';
 import {
-  AppStackParamList,
-  TAppNavigation,
-} from '@/navigation/AppNavigation/types';
+  FlatList,
+  View,
+  Text,
+  Dimensions,
+  useWindowDimensions,
+} from 'react-native';
+import {useNavigation} from '@react-navigation/native';
+
+import Feed from '../feed';
+import {Screens} from '@/const/Navigation.enum';
+import {TAppNavigation} from '@/navigation/AppNavigation/types';
+import CreateNewFeed from '../createNewFeed';
+import InfoTab from '../infoTab';
 
 interface TabButton {
   name: string;
@@ -18,50 +21,68 @@ interface TabButton {
 interface Props {
   tab?: number;
   tabList: TabButton[];
+  feedList: any[];
   handleChangeTab: (index: number) => void;
 }
 
-const {width} = Dimensions.get('window');
+const {width, height} = Dimensions.get('window');
 
-const ViewPager: React.FC<Props> = ({tab, tabList, handleChangeTab}) => {
-  const {styles} = useStyles(stylesheet);
+const ViewPager: React.FC<Props> = ({tab, tabList, feedList}) => {
   const flatListRef = useRef<FlatList>(null);
   const nav = useNavigation<TAppNavigation>();
 
+  const handleGoToDetailFeed = (
+    name: string,
+    desc: string,
+    avatar: string,
+    media: string,
+  ) => {
+    nav.navigate(Screens.DetailFeed, {
+      name: name,
+      desc: desc,
+      avatar: avatar,
+      media: media,
+    });
+  };
+
   useEffect(() => {
+    if (tab == undefined || tab < 0) {
+      return;
+    }
     if (flatListRef.current && tab !== undefined) {
       flatListRef.current.scrollToIndex({index: tab, animated: true});
     }
   }, [tab]);
 
-  const handleGoToDetailFeed = () => {
-    nav.navigate(Screens.DetailFeed, {
-      name: 'Bùi Bách Toàn',
-      desc: 'ahhaha',
-      avatar: '',
-      media: [],
-    });
-  };
-
   const renderTabContent = (index: number) => {
     switch (index) {
       case 0:
         return (
-          <View style={{}}>
-            <Feed handleGoToDetail={handleGoToDetailFeed} />
-            <Feed />
-            <Feed />
-            <Feed />
-            <Feed />
-            <Feed />
+          <View>
+            <CreateNewFeed avatar="https://img-cdn.pixlr.com/image-generator/history/65bb506dcb310754719cf81f/ede935de-1138-4f66-8ed7-44bd16efc709/medium.webp" />
+            <View style={{backgroundColor: '#fff', marginTop: 8}}>
+              {feedList?.map(item => {
+                return (
+                  <Feed
+                    handleGoToDetail={() => {
+                      handleGoToDetailFeed(
+                        item.name,
+                        item.name,
+                        item.avatar,
+                        item.media,
+                      );
+                    }}
+                    name={item.name}
+                    avatar={item.avatar}
+                    media={item.media}
+                  />
+                );
+              })}
+            </View>
           </View>
         );
       case 1:
-        return (
-          <View>
-            <Text>Content for Tab 1</Text>
-          </View>
-        );
+        return <InfoTab />;
       default:
         return (
           <View>
@@ -73,10 +94,10 @@ const ViewPager: React.FC<Props> = ({tab, tabList, handleChangeTab}) => {
 
   const renderItem = ({item, index}: {item: TabButton; index: number}) => (
     <View
+      key={index.toString()}
       style={{
         width: width,
         height: '100%',
-        justifyContent: 'center',
       }}>
       {renderTabContent(index)}
     </View>
@@ -88,11 +109,19 @@ const ViewPager: React.FC<Props> = ({tab, tabList, handleChangeTab}) => {
       horizontal={true}
       data={tabList}
       renderItem={renderItem}
-      keyExtractor={(item, index) => index.toString()}
+      keyExtractor={index => index.toString()}
       showsHorizontalScrollIndicator={false}
       snapToInterval={width}
-      scrollEnabled={true}
-      style={{height: tab == 0 ? '100%' : 500}}
+      scrollEnabled={false}
+      pagingEnabled={true}
+      decelerationRate="normal"
+      removeClippedSubviews={true}
+      initialNumToRender={2}
+      maxToRenderPerBatch={1}
+      windowSize={width}
+      style={{
+        height: tab == 0 ? '100%' : height - 40,
+      }}
     />
   );
 };

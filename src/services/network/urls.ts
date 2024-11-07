@@ -1,6 +1,6 @@
-import {env, getCurrentEnvironment} from '../../env';
+import {env} from '../../../env';
 
-const environment = getCurrentEnvironment();
+const environment = 'dev';
 
 export const urls = {
   urlProfile: env[environment].Profile,

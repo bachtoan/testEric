@@ -38,15 +38,7 @@ export function AppNavigation() {
           title: 'Chi tiết',
           headerTitleAlign: 'center',
           headerShadowVisible: false,
-          headerLeft: () => (
-            <TouchableOpacity
-              style={{marginLeft: 10}}
-              onPress={() => {
-                nav.goBack();
-              }}>
-              <Svg.ArrowLeft />
-            </TouchableOpacity>
-          ),
+          headerShown: false,
         }}
       />
     </Stack.Navigator>

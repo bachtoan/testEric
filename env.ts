@@ -3,13 +3,13 @@ import {Environment} from '@/const/App.enum';
 export const env: TEnv = {
   environment: Environment.Product,
   [Environment.Dev]: {
-    Media: 'https://media.dev.monkeyuni.net/',
+    Profile: 'https://rickandmortyapi.com/api/',
   },
   [Environment.Staging]: {
-    Media: 'https://media.monkeyuni.net/',
+    Profile: 'https://rickandmortyapi.com/api/',
   },
   [Environment.Product]: {
-    Media: 'https://media.monkeyuni.net/',
+    Profile: 'https://rickandmortyapi.com/api/',
   },
 };
 

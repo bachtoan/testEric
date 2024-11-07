@@ -1,28 +1,62 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, TouchableOpacity} from 'react-native';
 import {useStyles} from 'react-native-unistyles';
 
 import {stylesheet} from './styles';
 import Avatar from '../avatar';
+import {Svg} from '@/assets/icons';
 
 interface Props {
   name: string;
   desc: string;
+  time: string;
+  content?: string;
   avatar: string;
+  showArrowBack?: boolean;
+  onPressback: () => void;
 }
 
-const FeedHeader: React.FC<Props> = ({name, desc, avatar}) => {
+const FeedHeader: React.FC<Props> = ({
+  name,
+  desc,
+  time,
+  content,
+  showArrowBack,
+  onPressback,
+  avatar,
+}) => {
   const {styles} = useStyles(stylesheet);
 
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <Avatar style={styles.avatar} />
-        <View>
-          <Text style={styles.name}>{name}</Text>
-          <Text style={styles.name}>{desc}</Text>
+        <View style={styles.row}>
+          {showArrowBack ? (
+            <TouchableOpacity
+              onPress={onPressback}
+              style={{
+                padding: 14,
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}>
+              <Svg.ArrowLeft />
+            </TouchableOpacity>
+          ) : null}
+          <Avatar style={styles.avatar} imageUrl={avatar} />
+          <View>
+            <Text style={styles.name}>{name}</Text>
+            <View style={styles.row}>
+              <Text style={styles.desc}>{`@${name}`}</Text>
+              <View style={{paddingHorizontal: 3}}>
+                <Svg.Dot />
+              </View>
+              <Text style={styles.desc}>{time}</Text>
+            </View>
+          </View>
         </View>
+        <Svg.Option />
       </View>
+      <Text style={styles.content}>{content}</Text>
     </View>
   );
 };

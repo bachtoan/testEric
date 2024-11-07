@@ -1,13 +1,14 @@
 import React, {useEffect, useRef, useState} from 'react';
-import {FlatList, ScrollView, ScrollViewBase, Text, View} from 'react-native';
+import {ScrollView, View} from 'react-native';
 import PagerView from 'react-native-pager-view';
+import {useInfiniteQuery} from '@tanstack/react-query';
 
 import {styles} from './styles';
 import ProfileHeader from './component/header';
 import ListReel from '@/components/reelList';
 import {TabBar} from '@/components/tabbar';
-import Feed from '@/components/feed';
 import ViewPager from '@/components/viewPager';
+import {getDataProfile} from '@/controllers/Profile';
 
 const tabList = [
   {key: 0, name: 'Bài viết'},
@@ -19,53 +20,39 @@ const tabList = [
   {key: 6, name: 'Khác'},
 ];
 
-const arr = Array.from({length: 200}, (_, i) => (i + 1).toString());
-
-const feedList = [
-  {
-    name: 'Bài viết 1',
-    avatar:
-      'https://cdn.kona-blue.com/upload/kona-blue_com/post/images/2024/09/18/457/avatar-mac-dinh-7.jpg',
-    media: [
-      {
-        src: 'https://meatworld.com.vn/wp-content/uploads/anh-avatar-anime-2-1.jpg',
-        type: 'image',
-      },
-    ],
-  },
-  {
-    name: 'Bài viết 2',
-    avatar:
-      'https://cdn.kona-blue.com/upload/kona-blue_com/post/images/2024/09/18/457/avatar-mac-dinh-7.jpg',
-    media: [
-      {
-        src: 'https://meatworld.com.vn/wp-content/uploads/anh-avatar-anime-2-1.jpg',
-        type: 'image',
-      },
-    ],
-  },
-  {
-    name: 'Bài viết 3',
-    avatar:
-      'https://cdn.kona-blue.com/upload/kona-blue_com/post/images/2024/09/18/457/avatar-mac-dinh-7.jpg',
-    media: [
-      {
-        src: 'https://meatworld.com.vn/wp-content/uploads/anh-avatar-anime-2-1.jpg',
-        type: 'image',
-      },
-    ],
-  },
-];
-
 export function Profile() {
   const pagerViewRef = useRef<PagerView>(null);
   const [viewingList, setViewingList] = useState<number>();
+  const [dataFeed, setDataFeed] = useState<any>();
 
   const handleChangeTab = (index: number) => {
-    console.log('set: ', index);
+    console.log('handleChangeTab', index);
 
     setViewingList(index);
   };
+
+  const callData = async (pageParam: any) => {
+    const data = await getDataProfile();
+    const dataValidated = data.data.results.slice(0, 10).map(item => {
+      return {
+        name: item.name,
+        avatar: item.image,
+        media: item.image,
+      };
+    });
+    setDataFeed(dataValidated);
+    return dataValidated;
+  };
+
+  const {isLoading, isFetching, fetchNextPage} = useInfiniteQuery({
+    queryKey: [],
+    queryFn: ({pageParam = {}}: any) => {
+      callData(pageParam);
+    },
+    initialPageParam: undefined,
+    getNextPageParam: (_, allPage = []) => {},
+    getPreviousPageParam: (firstPage = []) => ({}),
+  });
 
   useEffect(() => {
     pagerViewRef.current?.setPage(viewingList);
@@ -73,11 +60,13 @@ export function Profile() {
 
   return (
     <ScrollView
-      style={{flex: 1}}
+      style={{flex: 1, backgroundColor: '#F9FAFB'}}
       stickyHeaderIndices={[2]}
       alwaysBounceVertical={false}
       alwaysBounceHorizontal={false}
       showsVerticalScrollIndicator={false}
+      collapsable
+      collapsableChildren
       bounces={false}
       bouncesZoom={false}>
       <ProfileHeader
@@ -96,11 +85,14 @@ export function Profile() {
         initialTab={viewingList}
       />
 
-      <ViewPager
-        tabList={tabList}
-        tab={viewingList}
-        handleChangeTab={handleChangeTab}
-      />
+      {!isFetching || !isLoading ? (
+        <ViewPager
+          tabList={tabList}
+          tab={viewingList}
+          handleChangeTab={handleChangeTab}
+          feedList={dataFeed}
+        />
+      ) : null}
     </ScrollView>
   );
 }

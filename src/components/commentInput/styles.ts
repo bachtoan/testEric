@@ -3,21 +3,21 @@ import {createStyleSheet} from 'react-native-unistyles';
 export const stylesheet = createStyleSheet(theme => ({
   container: {
     flexDirection: 'row',
-    height: 100,
+    justifyContent: 'center',
+    alignItems: 'center',
+    gap: 4,
   },
 
   avatar: {
-    width: 50,
-    height: 50,
+    width: 32,
+    height: 32,
   },
 
   input: {
     height: 40,
-    borderColor: 'gray',
-    borderWidth: 1,
     paddingHorizontal: 10,
-    marginBottom: 16,
-    borderRadius: 4,
+    borderRadius: 75,
     flex: 2,
+    backgroundColor: '#F9FAFB',
   },
 }));

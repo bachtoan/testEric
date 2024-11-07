@@ -2,10 +2,11 @@ import {createStyleSheet} from 'react-native-unistyles';
 
 export const stylesheet = createStyleSheet(theme => ({
   container: {
-    height: 300,
+    height: 400,
   },
 
   image: {
     flex: 1,
+    borderRadius: 10,
   },
 }));

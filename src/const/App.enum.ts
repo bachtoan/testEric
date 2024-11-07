@@ -6,5 +6,9 @@ export enum Environment {
   Product = 'production',
 }
 
+export enum StatusCode {
+  Success = '200',
+}
+
 export const isAndroid = Platform.OS === 'android';
 export const isIos = Platform.OS === 'ios';
