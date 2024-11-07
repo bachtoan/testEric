@@ -16,6 +16,8 @@ export const styleSheet = createStyleSheet(theme => ({
     flex: 1,
     flexDirection: 'row',
     marginRight: 10,
+    borderBottomWidth: isFocus ? 2 : 0,
+    borderBottomColor: '#3864FF',
   }),
 
   buttonText: isFocus => ({

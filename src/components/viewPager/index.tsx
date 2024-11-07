@@ -118,7 +118,7 @@ const ViewPager: React.FC<Props> = ({tab, tabList, feedList}) => {
       snapToInterval={width}
       scrollEnabled={false}
       pagingEnabled={true}
-      decelerationRate="normal"
+      decelerationRate="fast"
       removeClippedSubviews={true}
       initialNumToRender={2}
       maxToRenderPerBatch={1}

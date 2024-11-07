@@ -31,4 +31,20 @@ export const styles = StyleSheet.create({
     fontSize: 24,
     color: '#333',
   },
+
+  box: {
+    height: 250,
+    width: '100%',
+  },
+  boxA: {
+    backgroundColor: 'white',
+  },
+  boxB: {
+    backgroundColor: '#D8D8D8',
+  },
+  header: {
+    height: 250,
+    width: '100%',
+    backgroundColor: '#2196f3',
+  },
 });

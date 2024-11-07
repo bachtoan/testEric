@@ -11,8 +11,31 @@ interface AvatarProps {
   avatar: string;
 }
 
+const listButton = [
+  {
+    title: 'Phát trực tiếp',
+    icon: <Svg.Camera />,
+  },
+  {
+    title: 'Vị trí',
+    icon: <Svg.Location2 />,
+  },
+  {
+    title: 'Kết bạn',
+    icon: <Svg.AddFriend />,
+  },
+  {
+    title: 'Khác',
+    icon: <Svg.AddFriend />,
+  },
+];
+
 const CreateNewFeed: React.FC<AvatarProps> = ({avatar}) => {
   const {styles} = useStyles(stylesheet);
+
+  const onPress = (title: string) => {
+    console.warn('Press ', title);
+  };
 
   return (
     <View style={styles.container}>
@@ -25,41 +48,17 @@ const CreateNewFeed: React.FC<AvatarProps> = ({avatar}) => {
         <Svg.Image />
       </View>
       <View style={[styles.inputView, {flex: 1, overflow: 'hidden'}]}>
-        <ButtonApp
-          title="Phát trực tiếp"
-          icon={<Svg.Camera />}
-          type="border"
-          titleStyle={styles.titleButton}
-          onPress={() => {}}
-        />
-        <ButtonApp
-          title="Vị trí"
-          icon={<Svg.Location2 />}
-          type="border"
-          titleStyle={styles.titleButton}
-          onPress={() => {}}
-        />
-        <ButtonApp
-          title="Kết bạn"
-          icon={<Svg.AddFriend />}
-          type="border"
-          titleStyle={styles.titleButton}
-          onPress={() => {}}
-        />
-        <ButtonApp
-          title="Khác"
-          icon={<Svg.Smile_elipse />}
-          type="border"
-          titleStyle={styles.titleButton}
-          onPress={() => {}}
-        />
-        <ButtonApp
-          title="Khác"
-          icon={<Svg.VerifiedBadge />}
-          type="border"
-          titleStyle={styles.titleButton}
-          onPress={() => {}}
-        />
+        {listButton.map(item => {
+          return (
+            <ButtonApp
+              title={item.title}
+              icon={item.icon}
+              type="border"
+              titleStyle={styles.titleButton}
+              onPress={() => onPress(item.title)}
+            />
+          );
+        })}
       </View>
     </View>
   );
