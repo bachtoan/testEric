@@ -38,7 +38,9 @@ const Feed: React.FC<AvatarProps> = ({
         <MediaPreview imageUrl={media} />
       </TouchableOpacity>
       <FeedBehavior like={11} />
-      <CommentInput />
+      <View style={styles.commentInput}>
+        <CommentInput />
+      </View>
     </View>
   );
 };

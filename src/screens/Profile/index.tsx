@@ -26,8 +26,6 @@ export function Profile() {
   const [dataFeed, setDataFeed] = useState<any>();
 
   const handleChangeTab = (index: number) => {
-    console.log('handleChangeTab', index);
-
     setViewingList(index);
   };
 

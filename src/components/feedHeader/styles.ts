@@ -8,6 +8,18 @@ export const stylesheet = createStyleSheet(theme => ({
     alignItems: 'center',
   },
 
+  buttonBack: {
+    padding: 14,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
+  nameView: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 5,
+  },
+
   header: {
     flexDirection: 'row',
     alignItems: 'center',

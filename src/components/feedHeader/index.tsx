@@ -32,19 +32,16 @@ const FeedHeader: React.FC<Props> = ({
       <View style={styles.header}>
         <View style={styles.row}>
           {showArrowBack ? (
-            <TouchableOpacity
-              onPress={onPressback}
-              style={{
-                padding: 14,
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}>
+            <TouchableOpacity onPress={onPressback} style={styles.buttonBack}>
               <Svg.ArrowLeft />
             </TouchableOpacity>
           ) : null}
           <Avatar style={styles.avatar} imageUrl={avatar} />
           <View>
-            <Text style={styles.name}>{name}</Text>
+            <View style={styles.nameView}>
+              <Text style={styles.name}>{name}</Text>
+              <Svg.VerifiedBadge />
+            </View>
             <View style={styles.row}>
               <Text style={styles.desc}>{`@${name}`}</Text>
               <View style={{paddingHorizontal: 3}}>
