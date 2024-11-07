@@ -15,7 +15,6 @@ export function DetailFeed() {
     useRoute<TAppRoute<Screens.DetailFeed>>().params ?? {};
   const {bottom, top} = useSafeAreaInsets();
   const nav = useNavigation<TAppNavigation>();
-  console.log({name, desc, avatar, media});
 
   return (
     <View

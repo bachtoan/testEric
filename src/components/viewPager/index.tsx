@@ -13,6 +13,8 @@ import {Screens} from '@/const/Navigation.enum';
 import {TAppNavigation} from '@/navigation/AppNavigation/types';
 import CreateNewFeed from '../createNewFeed';
 import InfoTab from '../infoTab';
+import {useStyles} from 'react-native-unistyles';
+import {stylesheet} from './styles';
 
 interface TabButton {
   name: string;
@@ -28,6 +30,8 @@ interface Props {
 const {width, height} = Dimensions.get('window');
 
 const ViewPager: React.FC<Props> = ({tab, tabList, feedList}) => {
+  const {styles} = useStyles(stylesheet);
+
   const flatListRef = useRef<FlatList>(null);
   const nav = useNavigation<TAppNavigation>();
 
@@ -60,7 +64,7 @@ const ViewPager: React.FC<Props> = ({tab, tabList, feedList}) => {
         return (
           <View>
             <CreateNewFeed avatar="https://img-cdn.pixlr.com/image-generator/history/65bb506dcb310754719cf81f/ede935de-1138-4f66-8ed7-44bd16efc709/medium.webp" />
-            <View style={{backgroundColor: '#fff', marginTop: 8}}>
+            <View style={styles.newFeedView}>
               {feedList?.map(item => {
                 return (
                   <Feed
